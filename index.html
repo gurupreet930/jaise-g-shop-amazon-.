@@ -3,41 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-Shop | USA & Canada Official</title>
+    <title>G-Shop | Premium Electronics</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="nav-main">
+        <div class="nav-top">
             <div class="logo">G-Shop</div>
-            <div class="search"><input type="text" placeholder="Search Amazon Style..."><button>🔍</button></div>
-            <div class="user-nav">Hello, Sign In <br><b>Orders</b></div>
+            <div class="search-container">
+                <select><option>All</option></select>
+                <input type="text" placeholder="Search G-Shop...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+            <div class="nav-tools">
+                <div class="nav-item">Hello, Gurpreet <br><b>Account & Lists</b></div>
+                <div class="nav-item">Returns <br><b>& Orders</b></div>
+                <div class="cart">🛒 Cart</div>
+            </div>
+        </div>
+        <div class="nav-bottom">
+            <span>All Products</span> <span>Audio</span> <span>Wearables</span> <span>Gaming</span> <span>Electronics</span>
+            <span class="admin-link">Admin Panel</span>
         </div>
     </header>
 
-    <div class="offer-stripe" id="offer-text">Bigger Orders = Bigger Discounts! (Up to 55% OFF)</div>
-
-    <main class="products-container" id="product-list">
-        </main>
-
-    <div id="checkoutModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="p-name">Product Name</h2>
-            <p id="p-price" class="original-price"></p>
-            <p id="p-discounted" class="discount-price"></p>
-            <hr>
-            <form id="auto-order-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea placeholder="Shipping Address (USA/Canada)" required></textarea>
-                <button type="submit" class="final-btn">Secure Checkout</button>
-            </form>
-            <p style="font-size: 10px; color: gray; margin-top: 10px;">🔒 SSL Encrypted & Secure Payment</p>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="tagline">Spend $100+ and save instantly</p>
+            <h1>Premium Electronics.<br>Unbeatable Prices.</h1>
+            <p>Top-rated gear, delivered fast to USA & Canada. Spend over $100 and get <b>$30 off</b>.</p>
+            <div class="hero-btns">
+                <button class="btn-orange">Shop All Products →</button>
+                <button class="btn-outline">Track My Orders</button>
+            </div>
         </div>
+        <div class="hero-images">
+            <img src="https://i.postimg.cc/85zX6xZ1/pods.png" alt="Pods">
+            <img src="https://i.postimg.cc/mD3BvYx3/cam.png" alt="Cam">
+        </div>
+    </section>
+
+    <h3 class="section-title">Shop by Category</h3>
+    <div class="categories">
+        <div class="cat-card"><i class="fa fa-headphones"></i><p>Audio</p></div>
+        <div class="cat-card"><i class="fa fa-clock"></i><p>Wearables</p></div>
+        <div class="cat-card"><i class="fa fa-gamepad"></i><p>Gaming</p></div>
+        <div class="cat-card"><i class="fa fa-mobile"></i><p>Electronics</p></div>
     </div>
+
+    <h3 class="section-title">Featured Deals</h3>
+    <main class="product-grid" id="product-list"></main>
 
     <script src="script.js"></script>
 </body>
 </html>
-
