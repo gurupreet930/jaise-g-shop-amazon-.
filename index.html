@@ -3,58 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-Shop | Premium Electronics</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>G-Shop | USA Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .amazon-dark { background-color: #131921; }
+        .amazon-light { background-color: #232f3e; }
+        .amazon-orange { background-color: #ff9900; }
+        .amazon-yellow { background-color: #ffd814; }
+        body { background-color: #eaeded; color: #0f1111; }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="nav-top">
-            <div class="logo">G-Shop</div>
-            <div class="search-container">
-                <select><option>All</option></select>
-                <input type="text" placeholder="Search G-Shop...">
-                <button><i class="fa fa-search"></i></button>
-            </div>
-            <div class="nav-tools">
-                <div class="nav-item">Hello, Gurpreet <br><b>Account & Lists</b></div>
-                <div class="nav-item">Returns <br><b>& Orders</b></div>
-                <div class="cart">🛒 Cart</div>
-            </div>
-        </div>
-        <div class="nav-bottom">
-            <span>All Products</span> <span>Audio</span> <span>Wearables</span> <span>Gaming</span> <span>Electronics</span>
-            <span class="admin-link">Admin Panel</span>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <p class="tagline">Spend $100+ and save instantly</p>
-            <h1>Premium Electronics.<br>Unbeatable Prices.</h1>
-            <p>Top-rated gear, delivered fast to USA & Canada. Spend over $100 and get <b>$30 off</b>.</p>
-            <div class="hero-btns">
-                <button class="btn-orange">Shop All Products →</button>
-                <button class="btn-outline">Track My Orders</button>
+<header class="amazon-dark text-white">
+    <div class="flex items-center justify-between px-4 py-2">
+        <div class="text-2xl font-bold text-[#ff9900]">G-Shop</div>
+        <div class="flex-1 mx-4">
+            <div class="flex">
+                <input type="text" class="w-full p-2 rounded-l text-black" placeholder="Search Amazon Style...">
+                <button class="amazon-orange p-2 rounded-r text-black">🔍</button>
             </div>
         </div>
-        <div class="hero-images">
-            <img src="https://i.postimg.cc/85zX6xZ1/pods.png" alt="Pods">
-            <img src="https://i.postimg.cc/mD3BvYx3/cam.png" alt="Cam">
+        <div class="text-xs">
+            Hello, Gurpreet<br><span class="font-bold text-sm">Account & Lists</span>
         </div>
-    </section>
+    </div>
+    <div class="amazon-light px-4 py-1 text-sm flex gap-4">
+        <span>All Products</span><span>Electronics</span><span>Dash Cams</span><span>Smart Home</span>
+    </div>
+</header>
 
-    <h3 class="section-title">Shop by Category</h3>
-    <div class="categories">
-        <div class="cat-card"><i class="fa fa-headphones"></i><p>Audio</p></div>
-        <div class="cat-card"><i class="fa fa-clock"></i><p>Wearables</p></div>
-        <div class="cat-card"><i class="fa fa-gamepad"></i><p>Gaming</p></div>
-        <div class="cat-card"><i class="fa fa-mobile"></i><p>Electronics</p></div>
+<div class="bg-[#1a2a3a] p-8 text-white flex justify-between items-center border-b-4 border-[#ff9900]">
+    <div>
+        <p class="text-[#ff9900] text-sm font-bold uppercase tracking-wider">Spend $100+ and save instantly</p>
+        <h2 class="text-4xl font-bold mt-2">Premium Electronics.<br>Unbeatable Prices.</h2>
+        <p class="mt-4 text-gray-300 max-w-md text-sm">Top-rated gear, delivered fast to USA & Canada. Spend over $100 and get $30 off.</p>
+        <div class="mt-6 flex gap-4">
+            <button class="amazon-orange text-black px-6 py-2 rounded-full font-bold">Shop All Products →</button>
+            <button class="border border-white px-6 py-2 rounded-full font-bold">Track My Orders</button>
+        </div>
+    </div>
+    <div class="hidden md:flex gap-2">
+        <div class="bg-white p-2 rounded-lg shadow-xl"><img src="https://m.media-amazon.com/images/I/61jSbe9PZpL._AC_SL1500_.jpg" class="w-24"></div>
+        <div class="bg-white p-2 rounded-lg shadow-xl"><img src="https://m.media-amazon.com/images/I/71YvU0DuxvL._AC_SL1500_.jpg" class="w-24"></div>
+    </div>
+</div>
+
+<main class="p-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white p-4 rounded shadow-sm border border-gray-200">
+        <img src="https://m.media-amazon.com/images/I/61jSbe9PZpL._AC_SL1500_.jpg" class="h-48 mx-auto object-contain">
+        <h3 class="mt-4 font-semibold text-lg">Elite Wireless Pods Pro</h3>
+        <p class="text-orange-500 text-sm">★★★★☆ (2,847)</p>
+        <div class="mt-2 flex items-baseline gap-2">
+            <span class="text-2xl font-bold">$89.99</span>
+            <span class="text-gray-500 line-through text-sm">$129.99</span>
+        </div>
+        <button onclick="orderAlert('Pods Pro')" class="amazon-yellow w-full mt-4 py-2 rounded-full font-bold shadow-md hover:bg-[#f7ca00]">Buy Now</button>
     </div>
 
-    <h3 class="section-title">Featured Deals</h3>
-    <main class="product-grid" id="product-list"></main>
+    <div class="bg-white p-4 rounded shadow-sm border border-gray-200">
+        <img src="https://m.media-amazon.com/images/I/71YvU0DuxvL._AC_SL1500_.jpg" class="h-48 mx-auto object-contain">
+        <h3 class="mt-4 font-semibold text-lg">UltraSlim 4K Dash Cam</h3>
+        <p class="text-orange-500 text-sm">★★★★★ (1,293)</p>
+        <div class="mt-2 text-2xl font-bold">$119.99</div>
+        <button onclick="orderAlert('Dash Cam')" class="amazon-yellow w-full mt-4 py-2 rounded-full font-bold shadow-md hover:bg-[#f7ca00]">Buy Now</button>
+    </div>
+</main>
 
-    <script src="script.js"></script>
+<script>
+    function orderAlert(item) {
+        alert("Connecting to US Warehouse for: " + item + "\n\nAutomation Status: Active\nProfit Margin: $35.00 Secured.");
+    }
+</script>
+
 </body>
 </html>
+
