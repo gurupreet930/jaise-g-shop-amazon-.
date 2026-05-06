@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Shop | USA & Canada Official</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-main">
+            <div class="logo">G-Shop</div>
+            <div class="search"><input type="text" placeholder="Search Amazon Style..."><button>🔍</button></div>
+            <div class="user-nav">Hello, Sign In <br><b>Orders</b></div>
+        </div>
+    </header>
+
+    <div class="offer-stripe" id="offer-text">Bigger Orders = Bigger Discounts! (Up to 55% OFF)</div>
+
+    <main class="products-container" id="product-list">
+        </main>
+
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="p-name">Product Name</h2>
+            <p id="p-price" class="original-price"></p>
+            <p id="p-discounted" class="discount-price"></p>
+            <hr>
+            <form id="auto-order-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea placeholder="Shipping Address (USA/Canada)" required></textarea>
+                <button type="submit" class="final-btn">Secure Checkout</button>
+            </form>
+            <p style="font-size: 10px; color: gray; margin-top: 10px;">🔒 SSL Encrypted & Secure Payment</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
