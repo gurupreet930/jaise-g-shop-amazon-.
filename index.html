@@ -1,61 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Shop | Best Deals Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .amazon-gradient { background: linear-gradient(to bottom, #131921, #232f3e); }
+        .yellow-btn { background-color: #ffd814; border-color: #fcd200; }
+        .yellow-btn:hover { background-color: #f7ca00; }
+        .orange-btn { background-color: #ffa41c; border-color: #ff8f00; }
+        .nav-belt { background-color: #131921; color: white; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
 
-Library
-Tasks
-components.json
-components.json
-components (copy).json
-components.json
-mockupPreviewPlugin.ts
-Preview
-Publishing
-Your published app will expire in 28 days. Upgrade to keep your published app running.
-Production
-Status
-Gurupreet930 published 1 day ago
-Visibility
-Public
-Geography
-Asia
-Type
-Autoscale
-(2 vCPU / 4 GiB RAM / 1 Max)
-See all usage
-Database
-Production database connected
-Your production database is ready! Your app can now save and manage live user data securely.
-Expiration
-6/4/2026
-G-SHOP
-g-shop--gurupreet930.replit.app 
-Agent
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>G-SHOP | Premium Delivery</title> <script src="https://cdn.tailwindcss.com"></script> <style> body { background-color: #0f0f0f; color: white; font-family: sans-serif; } .gold-border { border: 1px solid #d4af37; } .gold-text { color: #d4af37; } .premium-btn { background: linear-gradient(145deg, #d4af37, #b8860b); } </style> </head> <body> <header class="p-5 flex justify-between items-center border-b border-gray-800"> <h1 class="text-3xl font-bold tracking-widest gold-text">G-SHOP</h1> <div class="bg-gray-900 px-4 py-1 rounded-full border border-gray-700 text-sm"> 🇺🇸 USA / CANADA </div> </header>
-<main class="p-6">
-    <h2 class="text-xl mb-6">Featured Premium Deals</h2>
-    
-    <div id="product-list" class="space-y-6">
-        <div class="bg-gray-900 rounded-2xl overflow-hidden gold-border p-4">
-            <div class="h-40 bg-gray-800 rounded-xl mb-4 flex items-center justify-center text-gray-500">
-                [Product Image]
+    <header class="nav-belt p-2 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center gap-4">
+            <h1 class="text-2xl font-bold text-orange-400 ml-4">G-SHOP</h1>
+            <div class="hidden md:flex flex-col text-xs ml-4">
+                <span class="text-gray-400">Deliver to</span>
+                <span class="font-bold"><i class="fas fa-map-marker-alt"></i> Bhilai, India</span>
             </div>
-            <h3 class="text-lg font-semibold">Elite Wireless Pods Pro</h3>
-            <p class="text-xs text-gray-400 mb-2">High-Fidelity Sound | Drone Delivery Available</p>
-            
-            <div class="flex justify-between items-end">
-                <div>
-                    <span class="text-gray-500 line-through text-sm">$129.99</span>
-                    <div class="text-2xl font-bold">$89.99</div>
-                </div>
-                <button onclick="orderAlert()" class="premium-btn text-black px-6 py-2 rounded-lg font-bold shadow-lg">
-                    BUY NOW
+        </div>
+
+        <div class="flex-grow max-w-2xl mx-4">
+            <div class="flex">
+                <input type="text" class="w-full p-2 rounded-l-md text-black outline-none" placeholder="Search G-Shop Items...">
+                <button class="bg-orange-400 p-2 rounded-r-md px-4 text-black font-bold">
+                    <i class="fas fa-search"></i>
                 </button>
             </div>
-            <p class="text-[10px] text-green-500 mt-2 font-bold italic">🔥 85% of users in Bhilai area are buying this!</p>
         </div>
-    </div>
-</main>
-<script>
-    function orderAlert() {
-        alert("Order System Connecting to US Warehouse...\n\nYour Profit Logic is Active: $25.00 Margin secured.");
-    }
-</script>
-</body> </html>
+
+        <div class="flex items-center gap-6 mr-4">
+            <div class="hidden md:block">
+                <p class="text-xs">Hello, Sign in</p>
+                <p class="font-bold">Account & Lists</p>
+            </div>
+            <div class="relative">
+                <i class="fas fa-shopping-cart text-2xl"></i>
+                <span class="absolute -top-2 -right-2 bg-orange-500 text-black text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative h-64 md:h-96 w-full overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-100 to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200" class="w-full h-full object-cover" alt="Banner">
+        <div class="absolute top-10 left-10 z-20 max-w-md">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Upto 70% Off on Tech</h2>
+            <button class="yellow-btn px-6 py-2 rounded-md font-semibold text-black">Shop Now</button>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto -mt-20 relative z-20 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white p-6 shadow-md rounded-sm flex flex-col">
+                <h3 class="font-bold text-xl mb-2">Smart Gadgets</h3>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400" class="h-48 object-contain mb-4" alt="Watch">
+                <p class="text-sm text-green-700 font-bold">New Release</p>
+                <p class="text-2xl font-bold mt-2">₹1,499.00</p>
+                <button class="orange-btn w-full mt-4 py-2 rounded-lg font-semibold shadow-sm">Add to Cart</button>
+            </div>
+
+            <div class="bg-white p-6 shadow-md rounded-sm flex flex-col">
+                <h3 class="font-bold text-xl mb-2">Home Decor</h3>
+                <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=400" class="h-48 object-contain mb-4" alt="Home">
+                <p class="text-sm text-blue-600">Free Delivery</p>
+                <p class="text-2xl font-bold mt-2">₹899.00</p>
+                <button class="orange-btn w-full mt-4 py-2 rounded-lg font-semibold shadow-sm">Add to Cart</button>
+            </div>
+
+            <div class="bg-white p-6 shadow-md rounded-sm flex flex-col">
+                <h3 class="font-bold text-xl mb-2">Wireless Audio</h3>
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400" class="h-48 object-contain mb-4" alt="Audio">
+                <p class="text-sm text-red-600 font-bold">Limited Time Deal</p>
+                <p class="text-2xl font-bold mt-2">₹2,999.00</p>
+                <button class="orange-btn w-full mt-4 py-2 rounded-lg font-semibold shadow-sm">Add to Cart</button>
+            </div>
+
+            <div class="bg-white p-6 shadow-md rounded-sm flex flex-col">
+                <h3 class="font-bold text-xl mb-2">Office Needs</h3>
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400" class="h-48 object-contain mb-4" alt="Office">
+                <p class="text-sm text-gray-500">Best Seller</p>
+                <p class="text-2xl font-bold mt-2">₹45,999.00</p>
+                <button class="orange-btn w-full mt-4 py-2 rounded-lg font-semibold shadow-sm">Add to Cart</button>
+            </div>
+            
